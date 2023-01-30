@@ -2,23 +2,21 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-[RequireComponent(typeof(Transform))]
-public class Spawn : MonoBehaviour
+public class Creator : MonoBehaviour
 {
     [SerializeField] private Enemy _enemy;
+    [SerializeField] private Transform _point;
 
     private float _coolDown = 2;
-    private Transform _poit;
     private Transform[] _points;
 
     private void Start()
     {
-        _poit = GetComponent<Transform>();
-        _points = new Transform[_poit.childCount];
+        _points = new Transform[_point.childCount];
 
-        for (int i = 0; i < _poit.childCount; i++)
+        for (int i = 0; i < _point.childCount; i++)
         {
-            _points[i] = _poit.GetChild(i);
+            _points[i] = _point.GetChild(i);
         }
 
         StartCoroutine(Create());

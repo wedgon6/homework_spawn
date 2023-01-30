@@ -549,6 +549,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _enemy: {fileID: 75477990193887306, guid: b183ac7b14f3880479970c64e656d12c, type: 3}
+  _point: {fileID: 1220564520}
 --- !u!4 &1220564520
 Transform:
   m_ObjectHideFlags: 0
